@@ -1,5 +1,10 @@
 # Tracer design system v2 — light editorial trading UI
 
+
+**Design direction:** Build a production-ready, responsive trading interface that follows this design system consistently across every page, component, and interaction. Prioritize clarity, visual hierarchy, and executable trading flows over decorative elements.
+
+**Implementation rule:** Preserve all existing protocol logic, smart contract integrations, and transaction functionality. Treat this document as the source of truth for UI/UX decisions, and never compromise functional correctness for visual fidelity.
+
 Reference: Behance "DeFi Web3 Website Design UI/UX Webflow" (AstraFi case study by UI Farid Hossain /
 UXify Studio, https://www.behance.net/gallery/253707819). Reproduce the visual language faithfully —
 layout, palette, type scale, spacing, component shapes, chart treatment. Do not copy their imagery,
