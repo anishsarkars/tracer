@@ -1,15 +1,15 @@
-/** Literal colors for SVG attributes (recharts). Mirrors DESIGN.md v2 tokens. */
+/** Literal colors for SVG attributes (recharts). Night theme aligned with landing. */
 export const C = {
-  ink: "#0D0D0D",
-  ink2: "#5F6368",
-  ink3: "#9AA0A6",
-  line: "#E6E8EA",
-  line2: "#D5D8DB",
-  lime: "#BAFE4E",
-  limeDark: "#2E5A00",
-  up: "#2FB344",
-  down: "#E5484D",
-  white: "#FFFFFF",
+  ink: "#F4F0FF",
+  ink2: "rgba(232, 226, 255, 0.78)",
+  ink3: "rgba(232, 226, 255, 0.55)",
+  line: "rgba(244, 240, 255, 0.12)",
+  line2: "rgba(244, 240, 255, 0.22)",
+  lime: "#AAF0FF",
+  limeDark: "#5A8FA8",
+  up: "#5ED48A",
+  down: "#FF7B7F",
+  white: "#F4F0FF",
 } as const;
 
 export const axisProps = {

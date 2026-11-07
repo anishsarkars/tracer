@@ -1,36 +1,38 @@
 @import "tailwindcss";
 
-/* ------------------------------------------------------------------ tokens (DESIGN.md v2) */
+/* ------------------------------------------------------------------ tokens — night landing theme (Hollowmere / Tracer descent) */
 @theme {
-  --color-bg: #ffffff;
-  --color-bg-2: #f9f7f4;
-  --color-bg-3: #f3f4f5;
-  --color-line: #e6e8ea;
-  --color-line-2: #d5d8db;
-  --color-ink: #0d0d0d;
-  --color-ink-2: #5f6368;
-  --color-ink-3: #6f7479;
-  --color-lime: #bafe4e;
-  --color-lime-ink: #0d0d0d;
-  --color-lime-dark: #2e5a00;
-  --color-up: #2fb344;
-  --color-down: #e5484d;
-  --color-panel: #0d0d0d;
-  --color-panel-2: #1a1b1e;
-  --color-panel-3: #5c6166;
-  --color-panel-line: rgba(255, 255, 255, 0.1);
+  --color-bg: #110a2a;
+  --color-bg-2: #16102e;
+  --color-bg-3: #1e1638;
+  --color-line: rgba(244, 240, 255, 0.12);
+  --color-line-2: rgba(244, 240, 255, 0.22);
+  --color-ink: #f4f0ff;
+  --color-ink-2: rgba(232, 226, 255, 0.78);
+  --color-ink-3: rgba(232, 226, 255, 0.55);
+  --color-lime: #aaf0ff;
+  --color-lime-ink: #110a2a;
+  --color-lime-dark: #5a8fa8;
+  --color-up: #5ed48a;
+  --color-down: #ff7b7f;
+  --color-panel: #0a0618;
+  --color-panel-2: #1a1238;
+  --color-panel-3: #2a2248;
+  --color-panel-line: rgba(244, 240, 255, 0.1);
+  --color-ember: #ff9a3c;
 
-  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-oswald), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --radius-sq: 2px;
 }
 
 :root {
-  color-scheme: light;
-  --hatch-ink: repeating-linear-gradient(45deg, rgba(13, 13, 13, 0.35) 0 1px, transparent 1px 6px);
-  --hatch-white: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 6px);
-  --hatch-v: repeating-linear-gradient(90deg, #d5d8db 0 1px, transparent 1px 4px);
+  color-scheme: dark;
+  --hatch-ink: repeating-linear-gradient(45deg, rgba(170, 235, 255, 0.35) 0 1px, transparent 1px 6px);
+  --hatch-white: repeating-linear-gradient(45deg, rgba(244, 240, 255, 0.22) 0 1px, transparent 1px 6px);
+  --hatch-v: repeating-linear-gradient(90deg, rgba(244, 240, 255, 0.15) 0 1px, transparent 1px 4px);
   --ease: 120ms ease-out;
   /* every diagonal on the page: vertical drop across the full width (~1.9deg at 1440px), one direction */
   --slant: 48px;
@@ -52,6 +54,7 @@ body {
 body {
   margin: 0;
   background: var(--color-bg);
+  background-image: radial-gradient(120% 80% at 50% -20%, rgba(120, 90, 255, 0.18), transparent 55%);
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-size: 14px;
@@ -62,7 +65,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 ::selection {
-  background: var(--color-lime);
+  background: rgba(170, 240, 255, 0.35);
   color: var(--color-ink);
 }
 a {
@@ -159,9 +162,10 @@ select,
 }
 /* ---- type scale */
 .display {
+  font-family: var(--font-display);
   font-size: clamp(40px, 5.2vw, 72px);
   line-height: 1.06;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 .h-section {
@@ -796,7 +800,7 @@ select,
   overflow: hidden;
   color: #fff;
   border-radius: 0;
-  background: linear-gradient(180deg, #0d0d0d 0%, #2a2c2f 100%);
+  background: linear-gradient(180deg, #110a2a 0%, #1a1238 55%, #16102e 100%);
   /* the hero's bottom edge IS the seam: one shallow diagonal, falling to the right. The 3D terrain is
      inside the clip, so the white section below fills the triangle with no gap. */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--slant)));
@@ -1043,24 +1047,26 @@ select,
   font-size: 15px;
 }
 .btn-primary {
-  background: var(--color-lime);
+  background: #f4f0ff;
   color: var(--color-lime-ink);
-  border-color: var(--color-lime);
+  border-color: rgba(244, 240, 255, 0.6);
 }
 .btn-primary:hover:not(:disabled) {
-  filter: brightness(0.94);
+  background: var(--color-ember);
+  color: #1a0b05;
+  border-color: var(--color-ember);
 }
 .btn-secondary {
-  background: var(--color-ink);
-  color: #fff;
-  border-color: var(--color-ink);
+  background: var(--color-bg-3);
+  color: var(--color-ink);
+  border-color: var(--color-line-2);
 }
 .btn-secondary:hover:not(:disabled) {
-  background: #2a2c2f;
-  border-color: #2a2c2f;
+  background: var(--color-bg-2);
+  border-color: var(--color-ink-3);
 }
 .btn-tertiary {
-  background: var(--color-bg);
+  background: transparent;
   color: var(--color-ink);
   border-color: var(--color-line-2);
 }
@@ -1076,13 +1082,14 @@ select,
   color: var(--color-ink);
 }
 .btn-white {
-  background: #fff;
-  color: var(--color-ink);
-  border-color: #fff;
+  background: #f4f0ff;
+  color: var(--color-lime-ink);
+  border-color: rgba(244, 240, 255, 0.6);
 }
 .btn-white:hover:not(:disabled) {
-  background: var(--color-bg-3);
-  border-color: var(--color-bg-3);
+  background: var(--color-ember);
+  color: #1a0b05;
+  border-color: var(--color-ember);
 }
 .btn:disabled {
   opacity: 0.4;
@@ -1784,32 +1791,33 @@ select.input {
 /* ------------------------------------------------------------------ docs section (GitBook-style shell) */
 @layer components {
   .docs {
-    --d-bg: #ffffff;
-    --d-side: #f9f7f4;
-    --d-text: #0d0d0d;
-    --d-text-2: #5f6368;
-    --d-text-3: #6f7479;
+    --d-bg: #110a2a;
+    --d-side: #16102e;
+    --d-text: #f4f0ff;
+    --d-text-2: rgba(232, 226, 255, 0.78);
+    --d-text-3: rgba(232, 226, 255, 0.55);
+    --d-line: rgba(244, 240, 255, 0.12);
+    --d-code: #1e1638;
+    --d-head: #1a1238;
+    --d-card: #16102e;
+    --d-hover: #1e1638;
+    min-height: 100vh;
+    background: var(--d-bg);
+    color: var(--d-text);
+    color-scheme: dark;
+  }
+  .docs[data-docs-theme="light"] {
+    --d-bg: #f9f7f4;
+    --d-side: #ffffff;
+    --d-text: #110a2a;
+    --d-text-2: #4a4460;
+    --d-text-3: #6f6a82;
     --d-line: #e6e8ea;
     --d-code: #f3f4f5;
     --d-head: #f3f4f5;
     --d-card: #ffffff;
     --d-hover: #f3f4f5;
-    min-height: 100vh;
-    background: var(--d-bg);
-    color: var(--d-text);
-  }
-  .docs[data-docs-theme="dark"] {
-    --d-bg: #0f1114;
-    --d-side: #16191d;
-    --d-text: #e6e8ea;
-    --d-text-2: #a3a8ae;
-    --d-text-3: #9aa0a6;
-    --d-line: rgba(255, 255, 255, 0.08);
-    --d-code: #16191d;
-    --d-head: #1c2025;
-    --d-card: #16191d;
-    --d-hover: #1c2025;
-    color-scheme: dark;
+    color-scheme: light;
   }
   .docs ::selection {
     background: var(--color-lime);

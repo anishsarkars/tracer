@@ -114,10 +114,10 @@ export const IconWarning = (p: P) => (
   </svg>
 );
 
-/** Tracer mark: lime square with a seismograph trace. */
+/** Tracer mark: cyan square with a seismograph trace (night theme). */
 export const LogoMark = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true">
-    <rect width="16" height="16" fill="#BAFE4E" />
-    <path d="M2 8.5h2.5l1.5-4 2.5 7 2-5 1.2 2H14" fill="none" stroke="#0D0D0D" strokeWidth="1.4" strokeLinejoin="miter" />
+    <rect width="16" height="16" fill="#AAF0FF" />
+    <path d="M2 8.5h2.5l1.5-4 2.5 7 2-5 1.2 2H14" fill="none" stroke="#110A2A" strokeWidth="1.4" strokeLinejoin="miter" />
   </svg>
 );

@@ -187,7 +187,7 @@ export function CreateGroupForm() {
 
       <aside className="panel flex flex-col gap-4 p-4 xl:sticky xl:top-[88px]">
         <span className="micro">Summary</span>
-        <div className="rounded-none bg-white p-4">
+        <div className="rounded-none border border-line bg-bg-3 p-4">
           <LineItems
             items={[
               { label: "Collateral to lock", value: required !== undefined ? `${fmtUsdc(required, 0)} USDC` : "—" },

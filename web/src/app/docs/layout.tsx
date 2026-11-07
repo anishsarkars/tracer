@@ -8,7 +8,7 @@ import { buildSearchIndex } from "@/lib/docs";
 
 export const metadata: Metadata = { title: { default: "Docs", template: "%s · Tracer Docs" } };
 
-const THEME_BOOT = `try{if(localStorage.getItem('tracer-docs-theme')==='dark'){document.currentScript.parentElement.setAttribute('data-docs-theme','dark')}}catch(e){}`;
+const THEME_BOOT = `try{if(localStorage.getItem('tracer-docs-theme')==='light'){document.currentScript.parentElement.setAttribute('data-docs-theme','light')}}catch(e){}`;
 
 /** GitBook-style docs shell: header with centered search, 280px grouped sidebar, content column. */
 export default function DocsLayout({ children }: { children: React.ReactNode }) {

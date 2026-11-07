@@ -95,7 +95,13 @@ const deploymentSchema = z.object({
   buyer: addressSchema,
 });
 
-const selectedDeployment = env.chainId === 84532 ? sepoliaDeploymentJson : deploymentJson;
+/** Pick the manifest that matches `NEXT_PUBLIC_CHAIN_ID` (fork 31337 vs Sepolia 84532). */
+const selectedDeployment =
+  env.chainId === 84532
+    ? sepoliaDeploymentJson
+    : env.chainId === 31337 || deploymentJson.chainId === env.chainId
+      ? deploymentJson
+      : sepoliaDeploymentJson;
 const parsedDeployment = deploymentSchema.safeParse(selectedDeployment);
 export const deploymentError = parsedDeployment.success
   ? undefined

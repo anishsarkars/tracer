@@ -4,36 +4,36 @@ import { useEffect, useState } from "react";
 
 const KEY = "tracer-docs-theme";
 
-/** Light/dark toggle for the docs section only. Persists in localStorage; default light. */
+/** Light/dark toggle for docs. Default matches app night theme (dark). */
 export function DocsThemeToggle() {
-  const [dark, setDark] = useState<boolean | null>(null);
+  const [light, setLight] = useState<boolean | null>(null);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
       const root = document.getElementById("docs-root");
-      setDark(root?.getAttribute("data-docs-theme") === "dark");
+      setLight(root?.getAttribute("data-docs-theme") === "light");
     }, 0);
     return () => window.clearTimeout(timer);
   }, []);
 
   const toggle = () => {
-    const next = !dark;
-    setDark(next);
+    const next = !light;
+    setLight(next);
     const root = document.getElementById("docs-root");
     if (root) {
-      if (next) root.setAttribute("data-docs-theme", "dark");
+      if (next) root.setAttribute("data-docs-theme", "light");
       else root.removeAttribute("data-docs-theme");
     }
     try {
-      localStorage.setItem(KEY, next ? "dark" : "light");
+      localStorage.setItem(KEY, next ? "light" : "dark");
     } catch {
       /* storage unavailable */
     }
   };
 
   return (
-    <button type="button" className="docs-icon-btn" onClick={toggle} aria-label={dark ? "Switch to light theme" : "Switch to dark theme"} title="Toggle docs theme">
-      {dark ? (
+    <button type="button" className="docs-icon-btn" onClick={toggle} aria-label={light ? "Switch to night theme" : "Switch to light theme"} title="Toggle docs theme">
+      {light ? (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
           <circle cx="12" cy="12" r="4" />
           <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" />
