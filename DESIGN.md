@@ -16,6 +16,11 @@ emphasis and for inverted panels. Labels are set in small caps-height text with 
 Numbers are large and light. Charts use diagonal hatching instead of gradient fills. The whole thing reads like
 a printed trading terminal, not a neon dashboard.
 
+
+
+
+
+
 ## Color tokens
 ```
 --bg:          #FFFFFF;   /* page */
@@ -46,6 +51,9 @@ Scale (desktop): hero 72/76 weight 400 letter-spacing -0.02em; section heading 5
 weight 500; body 16/24 weight 400 `--ink-2`; label 13/16 weight 500 `--ink-3` with bracket glyphs where used as
 navigation or meta (`[ Live ]`); micro 11/14 weight 500 uppercase 0.06em for table headers. Big numbers 40/44
 weight 400 tabular-nums. Step numerals "01 02 03" at 64px weight 300 `--line-2`.
+
+
+
 
 ## Layout
 - **Top navigation, no sidebar.** 64px bar, white, bottom hairline. Left: lime square logo mark (16px) + "Tracer" 18/500.
