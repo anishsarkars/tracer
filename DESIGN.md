@@ -160,6 +160,13 @@ a printed trading terminal, not a neon dashboard.
 - Ensure advanced technical details remain accessible.
 - Prevent accidental visual changes from protocol-level implementation updates.
 
+### 11.regiong theory
+- Confirm transaction values match authoritative application state.
+- Test wallet connection and network switching.
+- Ensure advanced technical details remain accessible.
+- Prevent accidental visual changes from protocol-level implementation updates.
+
+
 ### 12. Final Design Principle
 Tracer should feel like a carefully typeset financial instrument rather than a conventional crypto dashboard.
 
