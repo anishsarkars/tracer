@@ -21,6 +21,153 @@ a printed trading terminal, not a neon dashboard.
 
 
 
+### 1. Design System Architecture
+- Build all UI components from shared design tokens.
+- Maintain a single source of truth for colors, spacing, typography, and borders.
+- Use CSS variables instead of hardcoded values.
+- Keep the interface consistent across landing, market, portfolio, and trading pages.
+- Separate visual components from market logic and transaction execution.
+- Components must remain reusable and independently testable.
+
+### 2. Spacing and Grid
+- Use a 4px spacing base throughout the application.
+- Standard spacing values: 4, 8, 12, 16, 24, 32, 48, 64, and 96px.
+- Keep the main content width at 1280px.
+- Center desktop content with automatic horizontal margins.
+- Use 24px horizontal gutters on desktop.
+- Reduce gutters to 16px on tablet and 12px on mobile.
+- Align headings, tables, cards, and chart boundaries to a shared grid.
+- Avoid arbitrary spacing values between sections.
+- Use 96px vertical spacing on marketing pages.
+- Use 24px spacing inside trading application pages.
+
+### 3. Responsive Behavior
+- Desktop layouts use the two-column terminal grid.
+- Keep the workspace at approximately 66.67% width.
+- Keep the trade rail at approximately 33.33% width.
+- Tablet layouts may reduce the workspace to 60%.
+- The trade rail must remain visible when sufficient width exists.
+- On narrow screens, stack the trade ticket beneath the market chart.
+- Avoid horizontal scrolling for primary application content.
+- Tables may use controlled horizontal scrolling when necessary.
+- Keep critical transaction controls accessible on mobile.
+- The mobile navigation uses a fixed bottom icon dock.
+- Respect mobile safe-area insets.
+
+### 4. Navigation States
+- Navigation labels use bracketed editorial notation.
+- Example: `[ Markets ]`, `[ Portfolio ]`, and `[ Docs ]`.
+- Active navigation uses near-black text.
+- Inactive navigation uses secondary text.
+- Hover states must not introduce background gradients.
+- The wallet connection button remains visually prominent.
+- Connected wallet addresses use JetBrains Mono.
+- Truncate addresses without hiding their identifying beginning and ending.
+- Network selection must clearly communicate the active network.
+- Avoid introducing sidebar navigation into the primary layout.
+
+### 5. Component Consistency
+- All buttons use rectangular shapes.
+- Keep border radii between 0px and 4px.
+- Avoid pill-shaped buttons and rounded dashboard cards.
+- Use hairline borders to separate related content.
+- Avoid decorative shadows.
+- Use typography and spacing instead of elevation to establish hierarchy.
+- Components should remain visually quiet until interaction.
+- Every component must support disabled, loading, hover, and focus states.
+- Keep icon sizes consistent within navigation and controls.
+
+### 6. Trading Interaction States
+- Clearly distinguish executable actions from informational controls.
+- Transaction buttons must reflect the current market lifecycle.
+- Never expose actions that are guaranteed to revert.
+- Display loading state while a transaction is being submitted.
+- Disable duplicate submissions during pending transactions.
+- Show wallet confirmation requirements before execution.
+- Display transaction success only after confirmed execution.
+- Keep transaction errors understandable and actionable.
+- Preserve entered amounts when a transaction fails.
+- Avoid optimistic updates that misrepresent confirmed balances.
+- Clearly distinguish quoted prices from executed prices.
+- Display stale quote information when applicable.
+- Never present unavailable settlement values as estimates.
+- Use explicit lifecycle labels for pending and finalized states.
+
+### 7. Chart and Data Visualization
+- Charts must prioritize readability over decoration.
+- Use consistent stroke widths across market charts.
+- Preserve the distinction between realized volatility and market quotes.
+- Keep executable bid and ask prices visually identifiable.
+- Use diagonal hatching for uncertainty and allocation visualization.
+- Avoid gradients, glow effects, and unnecessary animation.
+- Use square chart markers.
+- Keep gridlines subtle and consistent.
+- Axis labels must remain readable at smaller widths.
+- Tooltip content should use a white background and black border.
+- Use tabular numerals for financial values.
+- Chart empty states should explain why data is unavailable.
+
+### 8. Accessibility and Contrast
+- Maintain readable contrast for primary and secondary text.
+- Do not rely on color alone to communicate transaction status.
+- Pair status colors with explicit labels.
+- Provide visible keyboard focus indicators.
+- Ensure every interactive control has an accessible label.
+- Support keyboard navigation across transaction controls.
+- Respect reduced-motion preferences.
+- Avoid flashing, pulsing, and unnecessary movement.
+- Keep touch targets sufficiently large on mobile.
+- Use semantic HTML for tables, buttons, and disclosure sections.
+
+### 9. Financial Data Formatting
+- Display USDC amounts with consistent decimal precision.
+- Use tabular numerals for prices, balances, and percentages.
+- Avoid unnecessary decimal places in summary statistics.
+- Preserve precision where transaction execution requires it.
+- Display unavailable values using an em dash.
+- Never substitute zero for missing financial data.
+- Distinguish realized values from projected values.
+- Keep market timestamps and expiry information explicit.
+- Use monospace formatting for wallet addresses and hashes.
+- Ensure financial values do not visually shift when updated.
+
+### 10. Content and Editorial Tone
+- Use concise, direct language.
+- Avoid unnecessary marketing language.
+- Prefer plain-language explanations for financial mechanisms.
+- Keep technical details accessible without removing important information.
+- Use bracketed labels for navigation and section metadata.
+- Avoid excessive uppercase text.
+- Keep section descriptions short and purposeful.
+- Explain transaction consequences before execution.
+- Clearly disclose when receipts are burned.
+- Explain collateral reservations without calling them coverage.
+
+### 11. Quality Assurance
+- Validate every component against the design tokens.
+- Test layouts at desktop, tablet, and mobile widths.
+- Verify contrast and keyboard accessibility.
+- Test empty, loading, error, and success states.
+- Ensure charts remain readable with missing data.
+- Verify market lifecycle restrictions.
+- Confirm transaction values match authoritative application state.
+- Test wallet connection and network switching.
+- Ensure advanced technical details remain accessible.
+- Prevent accidental visual changes from protocol-level implementation updates.
+
+### 12. Final Design Principle
+Tracer should feel like a carefully typeset financial instrument rather than a conventional crypto dashboard.
+
+Every visual element must serve readability, financial clarity, or transaction confidence.
+
+- Whitespace establishes hierarchy.
+- Typography establishes emphasis.
+- Hairlines establish structure.
+- Lime establishes action.
+- Black establishes authority.
+- Hatching establishes visual distinction.
+
+The interface must remain restrained, precise, editorial, and trustworthy across every application state.
 
 
 ## Color tokens
