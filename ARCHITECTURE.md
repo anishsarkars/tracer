@@ -463,6 +463,66 @@ finalized, never blended. Design system: `DESIGN.md` — follow it exactly.
 
 ---
 
+---
+
+## 5A. Frontend Design Architecture — Tracer Design System v2
+
+### 5A.1 Design Authority
+
+`DESIGN.md` is the single source of truth for the Tracer frontend's visual design.
+
+The frontend must implement the **Tracer Design System v2 — Light Editorial Trading UI** defined in `DESIGN.md`.
+
+- Reference: AstraFi editorial trading interface.
+- Visual direction: Swiss/editorial, minimal, financial-terminal aesthetic.
+- Primary background: white.
+- Primary text: near-black.
+- Accent: lime green.
+- Borders: thin, neutral hairlines.
+- Corners: square, with 0–4px radius.
+- Typography: Figtree and JetBrains Mono.
+- Charts: monochrome strokes and diagonal hatching.
+- No gradients except the specified dark hero background.
+- No glow, excessive shadows, or conventional rounded crypto-dashboard styling.
+
+`DESIGN.md` defines visual behavior. This architecture defines how that design integrates with the existing application.
+
+### 5A.2 Frontend Design Architecture
+
+The frontend follows a component-driven architecture:
+
+```text
+web/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx
+│   │   ├── markets/
+│   │   ├── series/[id]/
+│   │   ├── write/
+│   │   ├── portfolio/
+│   │   ├── hedge/
+│   │   └── docs/
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── navigation/
+│   │   ├── market/
+│   │   ├── trading/
+│   │   ├── charts/
+│   │   ├── portfolio/
+│   │   ├── collateral/
+│   │   ├── tables/
+│   │   └── ui/
+│   ├── lib/
+│   │   ├── api.ts
+│   │   ├── series.ts
+│   │   ├── pricing.ts
+│   │   └── wallet.ts
+│   ├── config/
+│   ├── abi/
+│   └── styles/
+│       ├── globals.css
+│       └── design-tokens.css
+
 ## 6. Dev flow
 
 ```bash
