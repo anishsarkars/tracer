@@ -14,6 +14,11 @@ If something here conflicts with code, fix the code or update this file — neve
 
 ---
 
+
+
+
+
+
 ## 0. Decisions (fixed)
 
 | Area | Decision |
@@ -34,6 +39,12 @@ Product name in UI: **Tracer**. Tagline: *Trade ETH's tracer, not its direction.
 ---
 
 ## 1. Financial definitions
+
+
+
+
+
+
 
 All times are unix seconds. `Δ` = `sampleInterval`. `n = (expiry − start) / Δ`, which must divide exactly.
 
