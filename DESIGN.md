@@ -9,6 +9,8 @@ crop_hero.png (dark hero with swap widget), crop_widgets.png (swap widget, icon 
 crop_dash2.png (dark account panel), crop_dash3.png (principle cards, light swap widget), crop_type.png,
 crop_palette.png, crop_final.png (allocation card with hatched bars, network list).
 
+
+
 ## Mood
 Swiss/editorial. Mostly white. Generous whitespace, thin hairlines, square corners everywhere (radius 0–4px),
 one loud lime accent used sparingly for the primary action and "live" state, near-black for the strongest
