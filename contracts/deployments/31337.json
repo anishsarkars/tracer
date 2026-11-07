@@ -1,0 +1,23 @@
+{
+  "accumulator": "0x3E70F8F4455EE8f75a4120860dce354e78406A42",
+  "aqua": "0x1111113CCf1426A8E30e2bfF5E005d929bF6a90a",
+  "buyer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "chainId": 31337,
+  "deploymentBlock": 51129738,
+  "feed": "0x71041dddad3595F9CEd3DcCFBe3D1F4b0a16Bb70",
+  "lens": "0x194c41a44DC0f11d13a6855c18B153123E1277E7",
+  "marketEngine": "0xA7AE3A642B4776117ACda172c3b3e25f3EA7699D",
+  "oracle": "0x5C7Eb41B8e042909815d7dEC7594977acB883d6E",
+  "portfolioAccumulator": "0x5fD74896fDB6160306Ac23B3dDF016EC2CF27e37",
+  "portfolioMarket": "0xCf11dB6dA2416f94432c41953e982Bb8E46473bf",
+  "programs": "0x3Fd427D44721C07BE86CA8bFc22Eac55a591c59b",
+  "router": "0x21B76a2c03032e0Ab0cCA0e5b285e951Fdc0bf95",
+  "routerBytecodeHash": "0x81da05c27684bb72935ccf0eedf959decaa37fdd0652ecc3b642b283d31c287c",
+  "routerSourceCommit": "unrecorded",
+  "schemaVersion": 3,
+  "seriesDeployer": "0xD5bA3f8107024b6954f90335d3ac3490bDEA31A3",
+  "seriesFactory": "0x646690af0573E371f57c78e808a586fFbD41faFe",
+  "usdc": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "weth": "0x4200000000000000000000000000000000000006",
+  "writer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+}
