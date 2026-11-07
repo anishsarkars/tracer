@@ -63,6 +63,11 @@ every payout by the liability that burn releases.
 
 ## How it prices
 
+
+
+
+
+
 One number drives both sides: the variance the market projects for the whole window.
 
 ```
@@ -128,6 +133,12 @@ Chainlink history in bounded permissionless checkpoints, finalizes, redeems and 
 deltas at every step.
 
 ## Status (verified 2026-09-12)
+
+
+
+
+
+
 
 | Check | Result |
 |---|---|
